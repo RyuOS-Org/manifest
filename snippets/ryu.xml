@@ -19,7 +19,7 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
   <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="RyuUI" />
-  <project path="device/lineage/sepolicy" name="device_ryudev_sepolicy" remote="RyuUI" />
+  <project path="device/lineage/sepolicy" name="device_ryu_sepolicy" remote="RyuUI" />
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="RyuUI" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="RyuUI" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="RyuUI" />
