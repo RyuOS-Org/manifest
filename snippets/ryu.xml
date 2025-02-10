@@ -23,6 +23,7 @@
   <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="RyuUI" />
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="RyuUI" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="RyuUI" />
+  <project path="packages/apps/RyuLab" name="packages_apps_RyuLab" remote="RyuUI" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="RyuUI" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="RyuUI" />
   <project path="system/core" name="system_core" groups="pdk" remote="RyuUI" />
