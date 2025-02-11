@@ -38,7 +38,7 @@ Here is our flag's
 
 ```bash
 RYU_MAINTAINER := RyuDev
-RYU_BUILD_TYPE := Unofficial
+RYU_BUILD_TYPE := Community
 TARGET_BOOT_ANIMATION_RES := 720/1080/1440
 # GAPPS? Bro this rom based on pixel, just build for GAPPS, not vanila XD
 ```
