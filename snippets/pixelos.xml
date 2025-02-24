@@ -5,10 +5,6 @@
       fetch="https://github.com/PixelOS-AOSP"
            revision="refs/heads/fifteen" />
 
-  <remote  name="PixelOS-Gitlab"
-           fetch="https://gitlab.com/PixelOS-AOSP"
-           revision="refs/heads/fifteen" />
-
   <!-- AOSP additions -->
   <project path="bionic" name="bionic" groups="pdk" remote="PixelOS" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="PixelOS" />
@@ -19,7 +15,6 @@
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="PixelOS" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="PixelOS" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="PixelOS" />
-  <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="PixelOS-Gitlab" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="PixelOS" />
 
 </manifest>
