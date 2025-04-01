@@ -5,12 +5,12 @@
             fetch="https://github.com/RyuUI-Org"
             revision="refs/heads/vic" />
 
-  <remote  name="RyuUI-Gitlab"
-           fetch="https://gitlab.com/ryudev-project"
-           revision="refs/heads/fifteen" />
+  <!-- bootable -->
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" groups="pdk-cw" remote="RyuUI" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="RyuUI" />
 
-  <!-- AOSP additions -->
-  <project path="build/make" name="build" groups="pdk, sysui-studio" remote="RyuUI">
+  <!-- build -->
+  <project path="build/make" name="build_make" groups="pdk,sysui-studio" remote="RyuUI" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -18,24 +18,38 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed, sysui-studio" remote="RyuUI">
+  <project path="build/release" name="build_release" groups="pdk,tradefed,sysui-studio" remote="RyuUI" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed,sysui-studio" remote="RyuUI" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="RyuUI" />
-  <project path="device/lineage/sepolicy" name="device_ryu_sepolicy" remote="RyuUI" />
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="RyuUI" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="RyuUI" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="RyuUI" />
-  <project path="packages/apps/RyuLab" name="packages_apps_RyuLab" remote="RyuUI" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="RyuUI" />
-  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="RyuUI" />
-  <project path="ryu/ryu_ota" name="ryu_ota" remote="RyuUI" />
-  <project path="system/core" name="system_core" groups="pdk" remote="RyuUI" />
 
-  <!-- Vendor additions -->
+  <!-- frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="RyuUI" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="RyuUI" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="RyuUI" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="RyuUI" />
+
+   <!-- manifest -->
+  <project path="manifest" name="manifest" remote="RyuUI" />
+
+  <!-- packages -->
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="RyuUI" />
+  <project path="packages/apps/RyuLab" name="packages_apps_RyuLab" remote="RyuUI" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs,pdk-cw-tvc" remote="RyuUI" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="RyuUI" />
+
+  <!-- sepolicy -->
+  <project path="device/lineage/sepolicy" name="device_ryu_sepolicy" remote="RyuUI" />
+
+  <!-- system -->
+  <project path="system/core" name="system_core" groups="pdk" remote="RyuUI" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="RyuUI" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="RyuUI" />
+
+  <!-- vendor -->
+  <project path="vendor/certification" name="vendor_certification" remote="RyuUI" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="RyuUI" />
   <project path="vendor/ryu" name="vendor_ryu" remote="RyuUI" />
-  <project path="vendor/ryu-pif" name="vendor_ryu-pif" remote="RyuUI" />
-  <project path="vendor/ryu/maintainer" name="ryu_official_maintainer" remote="RyuUI" />
 
 </manifest>

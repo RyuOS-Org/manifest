@@ -2,13 +2,13 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com"
+           fetch="https://android.googlesource.com/"
            review="https://android-review.googlesource.com/" />
-  <default revision="refs/tags/android-15.0.0_r20"
+  <default revision="refs/tags/android-15.0.0_r23"
            remote="aosp"
            sync-j="4" />
 
-  <superproject name="platform/superproject" remote="aosp" revision="android-15.0.0_r20"/>
+  <superproject name="platform/superproject" remote="aosp" revision="android-15.0.0_r23"/>
   <contactinfo bugurl="go/repo-bug" />
   <!-- BEGIN open-source projects -->
   <project path="build/make" name="platform/build" groups="pdk,sysui-studio" >
@@ -1062,11 +1062,12 @@
   <project path="trusty/vendor/google/aosp" name="trusty/vendor/google/aosp" groups="trusty,pdk">
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
-  <!-- END open-source projects -->
 
-  <include name="snippets/remove.xml" />
-  <include name="snippets/ryu.xml" />
-  <include name="snippets/lineage.xml" />
-  <include name="snippets/pixelos.xml" />
+  <include name="snippets/remove.xml"/>
+  <include name="snippets/lineage.xml"/>
+  <include name="snippets/ryu.xml"/>
+  <include name="snippets/clover.xml"/>
+
+  <!-- END open-source projects -->
 
 </manifest>

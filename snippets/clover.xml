@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="clover"
+           fetch="https://github.com/The-Clover-Project"
+           sync-c="true"
+           sync-j="4"
+           revision="15-qpr2" />
+
+  <remote  name="clover-gitlab"
+           fetch="https://gitlab.com/thecloverproject"
+           sync-c="true"
+           sync-j="4"
+           revision="15-qpr2" />
+
+  <!-- art -->
+  <project path="art" name="art" groups="pdk" remote="clover" />
+
+  <!-- bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="clover" />
+
+  <!-- external -->
+  <project path="external/skia" name="external_skia" groups="pdk,qcom_msm8x26" remote="clover" />
+
+  <!-- hardware -->
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel,pdk-desktop" remote="clover" />
+
+   <!-- packages -->
+  <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="clover" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="clover-gitlab" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="clover" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="clover" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="clover" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="clover" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="clover" />
+
+  <!-- vendor -->
+  <project path="vendor/gms" name="vendor_gms" remote="clover-gitlab" clone-depth="1" />
+
+</manifest>
