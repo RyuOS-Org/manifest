@@ -51,5 +51,6 @@
   <project path="vendor/certification" name="vendor_certification" remote="RyuUI" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="RyuUI" />
   <project path="vendor/ryu" name="vendor_ryu" remote="RyuUI" />
+  <project path="vendor/ryu/maintainer" name="ryu_official_maintainer" remote="RyuUI" />
 
 </manifest>
