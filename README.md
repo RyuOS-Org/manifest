@@ -12,21 +12,17 @@ repo init -u https://github.com/RyuUI-Org/manifest.git -b vic --git-lfs
 ```
 
 Then to sync up:
-*Please dont use ```--optimize-fetch --force-sync etc``` to make sure all repo are synced
-
 ```bash
-repo sync
+repo sync --no-clone-bundle --current-branch --no-tags -j4
 ```
 
 ## Building the System
 Before that, clone your keys to
 ```bash
-
 vendor/ryu-priv/keys
 ```
 
 but this is optional, it's just for signing your build
-
 
 Then inherit our vendor to your ```ryu_$device.mk```
 
@@ -35,11 +31,16 @@ $(call inherit-product, vendor/ryu/config/common_full_phone.mk)
 ```
 
 Here is our flag's
-
 ```bash
 RYU_MAINTAINER := RyuDev
-RYU_BUILD_TYPE := Community
+RYU_BUILD_TYPE := COMMUNITY
 TARGET_BOOT_ANIMATION_RES := 720/1080/1440
+
+# Additional flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_QUICK_TAP := true
+USE_PIXEL_CHARGER := true
 # GAPPS? Bro this rom based on pixel, just build for GAPPS, not vanila XD
 ```
 
@@ -53,11 +54,10 @@ source build/envsetup.sh
 Do launch, but u can use ```breakfast $device``` also
 
 ```bash
-lunch ryu_$device-ap4a-userdebug
+lunch ryu_$device-bp1a-userdebug
 ```
 
 Then start compilation
-
 ```bash
 mka ryu
 ```
