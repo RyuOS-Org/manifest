@@ -5,6 +5,10 @@
            fetch="https://github.com/"
            revision="lineage-22.2" />
 
+  <remote  name="Mi-Eldarion"
+           fetch="https://github.com/"
+           revision="a13/master" />
+
   <!-- build -->
   <project path="build/blueprint" name="LineageOS/android_build_blueprint" groups="pdk,tradefed" remote="LineageOS" />
 
@@ -96,9 +100,9 @@
     <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8550/Android.bp" />
     <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8550/Android.mk" />
   </project>
-  <project path="hardware/qcom-caf/msm8953/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,msm8953" remote="LineageOS" revision="lineage-22.2-caf-msm8953" />
+  <project path="hardware/qcom-caf/msm8953/audio" name="Mi-Eldarion/hardware_qcom_msm8953_4.19_audio" groups="qcom,msm8953" remote="Mi-Eldarion" revision="9.6.4.r1-05200" />
   <project path="hardware/qcom-caf/msm8953/display" name="LineageOS/android_hardware_qcom_display" groups="qcom" remote="LineageOS" revision="lineage-22.2-caf-msm8953" />
-  <project path="hardware/qcom-caf/msm8953/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,msm8953" remote="LineageOS" revision="lineage-22.2-caf-msm8953" />
+  <project path="hardware/qcom-caf/msm8953/media" name="Mi-Eldarion/hardware_qcom_msm8953_4.19_media" groups="qcom,msm8953" remote="Mi-Eldarion" revision="LA.UM.9.6.4.r1-05200" />
   <project path="hardware/qcom-caf/msm8996/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,legacy-qcom" remote="LineageOS" revision="lineage-22.2-caf-msm8996" />
   <project path="hardware/qcom-caf/msm8996/display" name="LineageOS/android_hardware_qcom_display" groups="qcom,legacy-qcom" remote="LineageOS" revision="lineage-22.2-caf-msm8996" />
   <project path="hardware/qcom-caf/msm8996/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,legacy-qcom" remote="LineageOS" revision="lineage-22.2-caf-msm8996" />
