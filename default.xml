@@ -1,8 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote  name="gitlab"
+            revision="refs/heads/16"
+            fetch="https://gitlab.com/LESSAOSP"
+            sync-c="true"
+            sync-j="4" />
+
+   <remote  name="github"
+            revision="refs/heads/16"
+            fetch="https://github.com/RyuOS-Org"
+            sync-c="true"
+            sync-j="4" />
+
+  <remote  name="github-less"
+            revision="refs/heads/16"
+            fetch="https://github.com/LESSAOSP"
+            sync-c="true"
+            sync-j="4" />
+
+  <remote  name="gitea"
+            revision="refs/heads/16"
+            fetch="https://gitea.com/LessAOSP"
+            sync-c="true"
+            sync-j="4" />
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-16.0.0_r1"
            remote="aosp"
@@ -557,7 +580,6 @@
   <project path="external/usb-ids" name="platform/external/usb-ids" groups="pdk" />
   <project path="external/uwb" name="platform/external/uwb" groups="pdk" />
   <project path="external/v4l2_codec2" name="platform/external/v4l2_codec2" groups="pdk" />
-  <project path="external/v4l-utils" name="platform/external/v4l-utils" groups="pdk" />
   <project path="external/vboot_reference" name="platform/external/vboot_reference" groups="pdk" />
   <project path="external/virglrenderer" name="platform/external/virglrenderer" groups="pdk" />
   <project path="external/virtio-media" name="platform/external/virtio-media" groups="pdk" />
@@ -1021,5 +1043,11 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
   <!-- END open-source projects -->
+
+  <!-- RyuOS -->
+  <include name="snippets/lineage.xml" />
+  <include name="snippets/remove.xml" />
+  <include name="snippets/ryuos.xml" />
+  <include name="snippets/lessaosp.xml" />
 
 </manifest>
